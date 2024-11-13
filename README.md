@@ -1,4 +1,4 @@
-# dsf# Data Warehousing
+# Data Warehousing
 
 ## Definition
 - A technology that enables gathering, storing, and presenting data in a form suitable for human exploration
