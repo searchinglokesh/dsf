@@ -396,3 +396,179 @@ Characteristics:
    - Efficient query engine
    - Fast response times
    - Advanced query capabilities
+
+## Question and answers:
+Q1: How do the four data warehouse characteristics provide better organization for decision support systems?
+
+A1: The four key characteristics of data warehouses provide superior organization through:
+1. Subject-oriented: Focuses on specific business subjects rather than operations, enabling better analysis
+2. Integrated: Consolidates data from multiple sources into consistent formats
+3. Time-variant: Maintains historical data for trend analysis
+4. Non-volatile: Data remains stable once loaded, ensuring consistent analysis
+These characteristics together support decision-making by providing clean, consistent, historical business data in an analysis-friendly format.
+
+Q2: What is the architecture of a data warehouse and its components?
+
+A2: A data warehouse architecture consists of these key components:
+1. Source Layer
+- Operational databases
+- External data sources
+- Legacy systems
+
+2. ETL Layer
+- Extraction tools
+- Transformation processes
+- Loading mechanisms
+
+3. Storage Layer
+- Central data warehouse
+- Data marts
+- Metadata repository
+
+4. Analysis Layer
+- OLAP tools
+- Data mining tools
+- Reporting tools
+
+Q3: What are the steps and approaches for data cleansing?
+
+A3: Data cleansing involves these steps:
+1. Data Auditing
+- Identify data quality issues
+- Profile data patterns
+
+2. Data Cleaning
+- Remove duplicates
+- Fix structural errors
+- Handle missing values
+- Standardize formats
+
+3. Verification
+- Validate cleaned data
+- Cross-check with business rules
+
+4. Reporting
+- Document changes made
+- Track cleaning metrics
+
+Q4: Explain star schema and snowflake schema.
+
+A4: 
+Star Schema:
+- Central fact table connected directly to dimension tables
+- Denormalized dimension tables
+- Simpler queries and better performance
+- More storage space required
+
+Snowflake Schema:
+- Fact table connected to normalized dimension tables
+- Dimension tables broken down into subdimensions
+- Reduces data redundancy
+- More complex queries but less storage space
+
+Q5: What are different storage design structures of a cube and their differences?
+
+A5: Three main cube storage structures:
+1. MOLAP (Multidimensional OLAP)
+- Stores data in multidimensional arrays
+- Fastest query performance
+- Requires more storage space
+
+2. ROLAP (Relational OLAP)
+- Stores data in relational tables
+- More scalable for large datasets
+- Slower query performance
+
+3. HOLAP (Hybrid OLAP)
+- Combines MOLAP and ROLAP
+- Stores detailed data in relational format
+- Aggregates in multidimensional format
+
+Q6: What are various OLAP operations and how does cascading improve query performance?
+
+A6: Key OLAP operations:
+1. Roll-up (aggregation)
+2. Drill-down (disaggregation)
+3. Slice (single dimension)
+4. Dice (multiple dimensions)
+5. Pivot (rotation)
+
+Cascading improves performance by:
+- Executing operations in optimal order
+- Reducing intermediate results
+- Minimizing memory usage
+- Leveraging pre-computed aggregates
+
+Q7: What are the shortcomings of ER modeling for analytical applications and how does dimensional modeling enhance it?
+
+A7: ER Modeling shortcomings:
+1. Complex for analysis
+2. Not optimized for queries
+3. Difficult to understand
+4. Poor performance for aggregations
+
+Dimensional Modeling enhancements:
+1. Simpler structure
+2. Query-optimized design
+3. Better performance
+4. Easier to understand and use
+
+Q8: What is the effective way of modeling metadata in a data warehouse?
+
+A8: Effective metadata modeling includes:
+1. Business Metadata
+- Business terms
+- Rules and policies
+- Data ownership
+
+2. Technical Metadata
+- Source-to-target mappings
+- Transformation rules
+- Data lineage
+
+3. Operational Metadata
+- Load statistics
+- Usage patterns
+- Performance metrics
+
+Q9: Why is a separate data warehouse needed in addition to OLTP systems?
+
+A9: Separate data warehouses are necessary because:
+1. Different purposes
+- OLTP: Operational processing
+- DW: Analysis and reporting
+
+2. Performance optimization
+- OLTP: Transaction-oriented
+- DW: Query-oriented
+
+3. Data structure
+- OLTP: Normalized
+- DW: Denormalized for analysis
+
+4. Data retention
+- OLTP: Current data
+- DW: Historical data
+
+Q10: How would you design an efficient algorithm to store a star schema with n dimensional tables and fact table?
+
+A10: Efficient algorithm steps:
+1. Indexing Strategy
+- Create bitmap indexes for dimension keys
+- Use composite indexes for fact table
+- Implement partitioning
+
+2. Storage Optimization
+- Compress dimension tables
+- Partition fact table by date
+- Pre-aggregate common queries
+
+3. Loading Process
+- Parallel load for dimensions
+- Bulk load fact table
+- Update indexes efficiently
+
+4. Query Optimization
+- Materialized views for common joins
+- Statistics maintenance
+- Query rewrite capabilities
