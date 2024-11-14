@@ -282,4 +282,117 @@ Characteristics:
 - Larger size
 - Numerical values
 
-This structure enables efficient data warehousing and analysis while maintaining data integrity and accessibility.
+# Data Warehouse Table Types
+
+## 1. Dimension Tables
+- Contains descriptive attributes about business entities
+- Characteristics:
+  - Relatively static data over time
+  - Smaller in size compared to fact tables
+  - Contains primary key and descriptive attributes
+  - Used for filtering and grouping data
+  - Supports hierarchical relationships
+
+### Dimension Table Components:
+1. Primary Key
+   - Generally numerical
+   - Source system keys typically not used directly
+2. Hierarchy Fields
+   - Fields for each level of dimension hierarchy
+3. Attribute Fields
+   - Additional descriptive information
+   - Related to hierarchy levels
+
+### Handling Changes in Dimension Tables (SCD - Slowly Changing Dimensions):
+1. Type 1: Overwrite
+   - Original data replaced by new data
+2. Type 2: Add New Record
+   - Preserves history by adding new rows
+3. Type 3: Add New Columns
+   - Modify table structure to track changes
+
+## 2. Fact Tables
+- Contains transactional/measurement data
+- Characteristics:
+  - Changes frequently over time
+  - Larger in size
+  - Contains foreign keys to dimension tables
+  - Contains numerical measures
+  - Represents business events or transactions
+
+### Fact Table Components:
+1. Foreign Keys
+   - References to dimension tables
+2. Measures
+   - Numerical values for analysis
+3. Degenerate Dimensions
+   - Transaction attributes that don't warrant a dimension
+
+### Types of Measures:
+1. Fully Additive
+   - Can be aggregated across all dimensions
+   - Example: Number of transactions, quantity sold
+2. Semi-Additive
+   - Can be aggregated across some dimensions
+   - Example: Account balance, inventory levels
+3. Non-Additive
+   - Cannot be meaningfully aggregated
+   - Example: Ratios, percentages
+
+# Schema Types
+1. Star Schema
+   - Dimension tables directly connected to fact table
+   - Simple and efficient
+2. Snowflake Schema
+   - Normalized dimension tables
+   - More complex but saves storage
+
+# OLAP (Online Analytical Processing)
+
+## Overview
+- Standard technique for analyzing large volumes of data
+- Transforms raw data into meaningful business dimensions
+- Facilitates reporting, aggregation, and trend analysis
+
+## OLAP Cube
+- Core building block for OLAP analysis
+- Enables fast aggregation queries
+- Multidimensional data representation
+
+## OLAP Operations:
+1. Slice and Dice
+   - Filter and segment data
+2. Roll-up and Drill-down
+   - Navigate hierarchy levels
+3. Drill-within and Drill-across
+   - Analyze within/across dimensions
+4. Pivot
+   - Rotate view of data
+
+## OLAP Server Types
+1. ROLAP (Relational OLAP)
+   - Uses relational databases
+   - More scalable for large datasets
+   - Slower query performance
+2. MOLAP (Multidimensional OLAP)
+   - Uses specialized storage structures
+   - Faster query performance
+   - Limited scalability
+
+## Key Features of OLAP Tools
+1. Summarization
+   - Multiple aggregation levels
+   - Flexible hierarchy navigation
+2. Visualization
+   - Interactive charts and graphs
+   - Multidimensional views
+3. Navigation
+   - Intuitive dimensional exploration
+   - Support for concurrent users
+4. Dimensionality
+   - Multiple dimension support
+   - Quick data refresh
+5. Query Processing
+   - Efficient query engine
+   - Fast response times
+   - Advanced query capabilities
