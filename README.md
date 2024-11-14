@@ -21,9 +21,9 @@
 ## ROLAP vs MOLAP
 - **ROLAP**: Enhanced to handle DBMS-like operations
 - **MOLAP**: Uses specialized storage mechanisms optimized for data warehousing
-![WhatsApp Image 2024-11-14 at 10 52 06 AM](https://github.com/user-attachments/assets/e0f7b1d2-aa68-4906-b72f-f7d8093cdea4)
 
 ## Architecture Components
+![WhatsApp Image 2024-11-14 at 10 52 06 AM](https://github.com/user-attachments/assets/e0f7b1d2-aa68-4906-b72f-f7d8093cdea4)
 
 ### 1. Data Sources
 - Repository integrating data from multiple sources
