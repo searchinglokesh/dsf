@@ -21,6 +21,7 @@
 ## ROLAP vs MOLAP
 - **ROLAP**: Enhanced to handle DBMS-like operations
 - **MOLAP**: Uses specialized storage mechanisms optimized for data warehousing
+![WhatsApp Image 2024-11-14 at 10 52 06 AM](https://github.com/user-attachments/assets/e0f7b1d2-aa68-4906-b72f-f7d8093cdea4)
 
 ## Architecture Components
 
@@ -183,6 +184,7 @@ Four main categories:
 4. More flexible implementation strategy
 
 # Data Warehouse ETL Process
+![WhatsApp Image 2024-11-14 at 10 52 07 AM](https://github.com/user-attachments/assets/a5276368-3362-4cf1-a284-a32740629b91)
 
 ## Extraction Types
 
@@ -410,25 +412,7 @@ These characteristics together support decision-making by providing clean, consi
 Q2: What is the architecture of a data warehouse and its components?
 
 A2: A data warehouse architecture consists of these key components:
-1. Source Layer
-- Operational databases
-- External data sources
-- Legacy systems
-
-2. ETL Layer
-- Extraction tools
-- Transformation processes
-- Loading mechanisms
-
-3. Storage Layer
-- Central data warehouse
-- Data marts
-- Metadata repository
-
-4. Analysis Layer
-- OLAP tools
-- Data mining tools
-- Reporting tools
+#### do previous
 
 Q3: What are the steps and approaches for data cleansing?
 
